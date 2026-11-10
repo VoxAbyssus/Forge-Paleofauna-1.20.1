@@ -1,0 +1,154 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "Ichthyosaurus",
+					"pivot": [0, 2, 17]
+				},
+				{
+					"name": "Rightfin1",
+					"parent": "Ichthyosaurus",
+					"pivot": [0, 2, 17],
+					"cubes": [
+						{"origin": [-3.3, -0.1, -3.75], "size": [1, 5, 2], "inflate": 0.1, "pivot": [-2.3, 2.4, -3], "rotation": [25.6, -10.7, 20.1], "uv": [0, 34]}
+					]
+				},
+				{
+					"name": "Rightfin2",
+					"parent": "Ichthyosaurus",
+					"pivot": [0, 2, 17.9],
+					"cubes": [
+						{"origin": [-3.1, 1.5, 6.25], "size": [1, 3, 2], "pivot": [-2.1, 2.5, 6.25], "rotation": [45.6, -10.7, 20.1], "uv": [26, 8]}
+					]
+				},
+				{
+					"name": "Leftfin2",
+					"parent": "Ichthyosaurus",
+					"pivot": [0, 2, 17.9],
+					"cubes": [
+						{"origin": [2.1, 1.5, 6.25], "size": [1, 3, 2], "pivot": [2.1, 2.5, 6.25], "rotation": [45.6, 10.7, -20.1], "uv": [16, 26]}
+					]
+				},
+				{
+					"name": "Leftfin1",
+					"parent": "Ichthyosaurus",
+					"pivot": [0, 2, 17],
+					"cubes": [
+						{"origin": [2.3, -0.1, -3.75], "size": [1, 5, 2], "inflate": 0.1, "pivot": [2.3, 2.4, -3], "rotation": [25.6, 10.7, -20.1], "uv": [6, 34]}
+					]
+				},
+				{
+					"name": "Head",
+					"parent": "Ichthyosaurus",
+					"pivot": [0, 1.6, 17],
+					"cubes": [
+						{"origin": [-1.5, 4.55, -9.3], "size": [3, 3, 4], "uv": [30, 31]},
+						{"origin": [-0.65, 6, -14.8], "size": [1.3, 1, 7], "pivot": [0, 4.7, -9.8], "rotation": [5, 0, 0], "uv": [0, 26]}
+					]
+				},
+				{
+					"name": "Jaw",
+					"parent": "Head",
+					"pivot": [0, 1.6, 17],
+					"cubes": [
+						{"origin": [-0.55, 5.15, -14.7], "size": [1.1, 1, 7], "uv": [26, 0]}
+					]
+				},
+				{
+					"name": "LowerBody",
+					"parent": "Ichthyosaurus",
+					"pivot": [0, 2, 17],
+					"cubes": [
+						{"origin": [-2, 3.45, -0.75], "size": [4, 5, 8], "uv": [0, 13]},
+						{
+							"origin": [-0.7, 6.8, 0.35],
+							"size": [1, 5, 3],
+							"pivot": [-0.25, 9, 1.35],
+							"rotation": [-25, 0, 0],
+							"uv": {
+								"north": {"uv": [15, 34], "uv_size": [1, 5]},
+								"east": {"uv": [32, 8], "uv_size": [3, 5]},
+								"south": {"uv": [32, 38], "uv_size": [1, 5]},
+								"west": {"uv": [12, 34], "uv_size": [3, 5]},
+								"up": {"uv": [38, 41], "uv_size": [-1, -3]},
+								"down": {"uv": [39, 41], "uv_size": [-1, -3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "UpperBody",
+					"parent": "LowerBody",
+					"pivot": [0, 2, 17],
+					"cubes": [
+						{"origin": [-2.5, 2.95, -6.75], "size": [5, 5.7, 8.75], "inflate": 0.2, "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Tailseg1",
+					"parent": "Ichthyosaurus",
+					"pivot": [0, 2, 17],
+					"cubes": [
+						{"origin": [-1.5, 4.3, 6.5], "size": [3, 4, 4], "uv": [16, 31]}
+					]
+				},
+				{
+					"name": "Tailseg2",
+					"parent": "Tailseg1",
+					"pivot": [0, 2, 17],
+					"cubes": [
+						{"origin": [-0.9, 5.15, 8.1], "size": [2, 3, 6], "uv": [24, 13]}
+					]
+				},
+				{
+					"name": "Tailseg3",
+					"parent": "Tailseg2",
+					"pivot": [0, 2, 17],
+					"cubes": [
+						{"origin": [-0.75, 5.7, 11.5], "size": [1.5, 2, 7], "uv": [24, 22]},
+						{
+							"origin": [-0.5, 7.75, 16.15],
+							"size": [1, 5, 2],
+							"inflate": -0.1,
+							"pivot": [0.5, 5.75, 11.3],
+							"rotation": [-15, 0, 0],
+							"uv": {
+								"north": {"uv": [33, 38], "uv_size": [1, 5]},
+								"east": {"uv": [22, 26], "uv_size": [2, 5]},
+								"south": {"uv": [34, 38], "uv_size": [1, 5]},
+								"west": {"uv": [35, 8], "uv_size": [2, 5]},
+								"up": {"uv": [40, 10], "uv_size": [-1, -2]},
+								"down": {"uv": [40, 12], "uv_size": [-1, -2]}
+							}
+						},
+						{
+							"origin": [-0.5, 13.25, 25.4],
+							"size": [1, 4, 2.25],
+							"inflate": -0.2,
+							"pivot": [0, 11.25, 21.05],
+							"rotation": [-147.5, 0, 0],
+							"uv": {
+								"north": {"uv": [35, 38], "uv_size": [1, 4]},
+								"east": {"uv": [37, 8], "uv_size": [2, 4]},
+								"south": {"uv": [36, 38], "uv_size": [1, 4]},
+								"west": {"uv": [30, 38], "uv_size": [2, 4]},
+								"up": {"uv": [13, 41], "uv_size": [-1, -2]},
+								"down": {"uv": [14, 41], "uv_size": [-1, -2]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "paleofauna:block/cobbled_limestone",
+    "side": "paleofauna:block/cobbled_limestone",
+    "top": "paleofauna:block/cobbled_limestone"
+  }
+}

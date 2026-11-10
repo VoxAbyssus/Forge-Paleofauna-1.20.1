@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "paleofauna:block/limestone_slab"
+    },
+    "type=double": {
+      "model": "paleofauna:block/limestone"
+    },
+    "type=top": {
+      "model": "paleofauna:block/limestone_slab_top"
+    }
+  }
+}

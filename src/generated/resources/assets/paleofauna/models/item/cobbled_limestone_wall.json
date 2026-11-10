@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "paleofauna:block/cobbled_limestone"
+  }
+}

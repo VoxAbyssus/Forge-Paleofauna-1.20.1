@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "paleofauna:cobbled_limestone"
+    }
+  },
+  "pattern": [
+    "LLL"
+  ],
+  "result": {
+    "count": 6,
+    "item": "paleofauna:cobbled_limestone_slab"
+  },
+  "show_notification": true
+}
