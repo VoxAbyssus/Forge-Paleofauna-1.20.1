@@ -14,7 +14,7 @@ public class ExtractorScreen extends AbstractContainerScreen<ExtractorMenu> {
             ResourceLocation.fromNamespaceAndPath(Paleofauna.MOD_ID, "textures/gui/extractor_gui.png");
 
     public ExtractorScreen(ExtractorMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
-        super(pMenu, pPlayerInventory, pTitle);
+        super(pMenu, pPlayerInventory, Component.empty());
     }
 
     @Override

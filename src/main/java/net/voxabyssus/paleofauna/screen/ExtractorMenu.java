@@ -112,7 +112,6 @@ public class ExtractorMenu extends AbstractContainerMenu {
     private static final int VANILLA_FIRST_SLOT_INDEX = 0;
     private static final int TE_INVENTORY_SLOT_INDEX =VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
-    private static final int TE_INVENTORY_SLOT_COUNT = 10;
     @Override
     public ItemStack quickMoveStack(Player player, int index) {
         ItemStack emptyStack = ItemStack.EMPTY;
