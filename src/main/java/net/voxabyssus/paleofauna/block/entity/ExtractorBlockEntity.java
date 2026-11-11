@@ -26,8 +26,12 @@ import net.voxabyssus.paleofauna.item.ModItems;
 import net.voxabyssus.paleofauna.screen.ExtractorMenu;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import software.bernie.geckolib.animatable.GeoBlockEntity;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.util.GeckoLibUtil;
 
-public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
+public class ExtractorBlockEntity extends BlockEntity implements MenuProvider, GeoBlockEntity {
     private final ItemStackHandler itemHandler = new ItemStackHandler(10);
 
     private static final int INPUT_SLOT = 0;
@@ -166,5 +170,17 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
 
     private void increaseCraftingProgress() {
         progress++;
+    }
+
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
+
+    }
+
+    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return cache;
     }
 }

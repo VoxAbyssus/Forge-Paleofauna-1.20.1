@@ -1,4 +1,4 @@
-// 1.20.1	2026-11-10T04:24:51.1180305	Item Models: paleofauna
+// 1.20.1	2026-11-10T19:26:12.1916741	Item Models: paleofauna
 8b8a2d185c5e09926deeb2705b4fbd15c49d9d12 assets/paleofauna/models/item/cambrian_tissue.json
 c279134c313a6d625320785736e704443aba09cd assets/paleofauna/models/item/carboniferous_tissue.json
 47a99b0d83a48234ba066a691440b1061fafd41a assets/paleofauna/models/item/cobbled_limestone_slab.json
@@ -20,6 +20,7 @@ a7d3ae9ed2fd345ece09df56897013206fcdaa84 assets/paleofauna/models/item/dsungarip
 bcdb2d33d05483b5a3c3705d3479b0fc227791d9 assets/paleofauna/models/item/dsungaripterus_skull.json
 2251a43489911d06b925cb86bef17301d042bc1e assets/paleofauna/models/item/dsungaripterus_vertebrae.json
 6ee661d4e4ccab44bb525788750acc8dcb2e4e74 assets/paleofauna/models/item/dsungaripterus_wing_bone.json
+e0f7b66a84e6588f01abbbce75b1803ffe5d46e2 assets/paleofauna/models/item/extractor.json
 74872b7b428158f4cc2547baab0424ecbae405cb assets/paleofauna/models/item/guanlong_arm_bone.json
 58c5d3b721ba9b9c5622e847fe1b138830cbc525 assets/paleofauna/models/item/guanlong_dna.json
 022c87eadc4170d8b76dc5bd560f858bb25b1528 assets/paleofauna/models/item/guanlong_leg_bone.json

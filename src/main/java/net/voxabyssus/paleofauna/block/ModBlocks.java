@@ -11,6 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.voxabyssus.paleofauna.Paleofauna;
 import net.voxabyssus.paleofauna.block.custom.ExtractorBlock;
 import net.voxabyssus.paleofauna.item.ModItems;
+import net.voxabyssus.paleofauna.item.custom.ExtractorItem;
 
 import java.util.function.Supplier;
 
@@ -18,12 +19,15 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Paleofauna.MOD_ID);
 
-    public static final RegistryObject<Block> EXTRACTOR = registerBlock("extractor",
-            () -> new ExtractorBlock(
-                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-                            .strength(3.0F)
-                            .noOcclusion()
-            ));
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
+        if (name.equals("extractor")) {
+            return ModItems.ITEMS.register(name,
+                    () -> new ExtractorItem(block.get(), new Item.Properties()));
+        }
+
+        return ModItems.ITEMS.register(name,
+                () -> new BlockItem(block.get(), new Item.Properties()));
+    }
 
     public static final RegistryObject<Block> LIMESTONE = registerBlock("limestone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
@@ -76,16 +80,20 @@ public class ModBlocks {
     public static final RegistryObject<Block> LIMESTONE_FOSSIL = registerBlock("limestone_fossil",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_ORE)));
 
+    public static final RegistryObject<Block> EXTRACTOR = registerBlock("extractor",
+            () -> new ExtractorBlock(
+                    BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                            .strength(3.0F)
+                            .noOcclusion()
+            ));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
+
     }
 
-    private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
-    }
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

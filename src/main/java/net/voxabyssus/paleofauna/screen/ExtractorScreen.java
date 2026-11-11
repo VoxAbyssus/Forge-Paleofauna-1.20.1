@@ -25,6 +25,7 @@ public class ExtractorScreen extends AbstractContainerScreen<ExtractorMenu> {
 
     @Override
     protected void renderBg(GuiGraphics guiGraphics, float pPartialTick, int pMouseX, int pMouseY) {
+        RenderSystem.enableBlend();
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0f, 1.0f);
         RenderSystem.setShaderTexture(0, TEXTURE);
@@ -38,7 +39,7 @@ public class ExtractorScreen extends AbstractContainerScreen<ExtractorMenu> {
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if (menu.isCrafting()) {
-            guiGraphics.blit(TEXTURE, x + 85, y + 30, 176, 0, 8, menu.getScaledProgress());
+            guiGraphics.blit(TEXTURE, x + 36, y + 31, 182, 235, menu.getScaledProgress(), 16);
         }
     }
 

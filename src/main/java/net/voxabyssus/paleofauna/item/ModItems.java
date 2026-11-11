@@ -142,8 +142,6 @@ public class    ModItems {
     public static final RegistryObject<Item> DSUNGARIPTERUS_LEG_BONE = ITEMS.register("dsungaripterus_leg_bone",
             () -> new Item(new Item.Properties()));
 
-   //public static final RegistryObject<Item> ICHTHYOSAURUS_SPAWN_EGG = ITEMS.register("ichthyosaurus_spawn_egg",
-            //() -> new SpawnEggItem(new Item.Properties()));
     public static final RegistryObject<Item> ICHTHYOSAURUS_SAC = ITEMS.register("ichthyosaurus_sac",
            () -> new AquaticSacItem(new Item.Properties(),
                    () -> ModEntities.ICHTHYOSAURUS_COMMUNIS.get()));

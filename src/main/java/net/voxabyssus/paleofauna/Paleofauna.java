@@ -3,6 +3,7 @@ package net.voxabyssus.paleofauna;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -14,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.voxabyssus.paleofauna.block.ModBlocks;
 import net.voxabyssus.paleofauna.block.entity.ModBlockEntities;
+import net.voxabyssus.paleofauna.block.entity.client.ExtractorRenderer;
 import net.voxabyssus.paleofauna.entity.ModEntities;
 import net.voxabyssus.paleofauna.item.ModCreativeModTabs;
 import net.voxabyssus.paleofauna.item.ModItems;
@@ -66,6 +68,14 @@ public class Paleofauna {
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
+        @SubscribeEvent
+        public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(
+                    ModBlockEntities.EXTRACTOR_BE.get(),
+                    ExtractorRenderer::new
+            );
+        }
+
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 

@@ -23,7 +23,6 @@ public class ExtractorMenu extends AbstractContainerMenu {
 
     public ExtractorMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.EXTRACTOR_MENU.get(), pContainerId);
-        checkContainerSize(inv, 2);
         blockEntity = ((ExtractorBlockEntity) entity);
         this.level = inv.player.level();
         this.data = data;
@@ -32,8 +31,61 @@ public class ExtractorMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler, 0, 80, 11));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1, 80, 59));
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 8, 31));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 116, 13) {
+                @Override
+                public boolean mayPlace(ItemStack stack) {
+                    return false;
+                }
+            });
+            this.addSlot(new SlotItemHandler(iItemHandler, 2, 134, 13) {
+                @Override
+                public boolean mayPlace(ItemStack stack) {
+                    return false;
+                }
+            });
+            this.addSlot(new SlotItemHandler(iItemHandler, 3, 152, 13) {
+                @Override
+                public boolean mayPlace(ItemStack stack) {
+                    return false;
+                }
+            });
+            this.addSlot(new SlotItemHandler(iItemHandler, 4, 116, 31) {
+                @Override
+                public boolean mayPlace(ItemStack stack) {
+                    return false;
+                }
+            });
+            this.addSlot(new SlotItemHandler(iItemHandler, 5, 134, 31) {
+                @Override
+                public boolean mayPlace(ItemStack stack) {
+                    return false;
+                }
+            });
+            this.addSlot(new SlotItemHandler(iItemHandler, 6, 152, 31){
+                @Override
+                public boolean mayPlace(ItemStack stack) {
+                    return false;
+                }
+            });
+            this.addSlot(new SlotItemHandler(iItemHandler, 7, 116, 49) {
+                @Override
+                public boolean mayPlace(ItemStack stack) {
+                    return false;
+                }
+            });
+            this.addSlot(new SlotItemHandler(iItemHandler, 8, 134, 49) {
+                @Override
+                public boolean mayPlace(ItemStack stack) {
+                    return false;
+                }
+            });
+            this.addSlot(new SlotItemHandler(iItemHandler, 9, 152, 49) {
+                @Override
+                public boolean mayPlace(ItemStack stack) {
+                    return false;
+                }
+            });
         });
 
         addDataSlots(data);
@@ -47,7 +99,7 @@ public class ExtractorMenu extends AbstractContainerMenu {
     public int getScaledProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);
-        int progressArrowSize = 26;
+        int progressArrowSize = 68;
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
@@ -62,28 +114,40 @@ public class ExtractorMenu extends AbstractContainerMenu {
 
     private static final int TE_INVENTORY_SLOT_COUNT = 10;
     @Override
-    public ItemStack quickMoveStack(Player playerIn, int pIndex) {
-        Slot sourceSlot = slots.get(pIndex);
-        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;
-        ItemStack sourceStack = sourceSlot.getItem();
-        ItemStack copyOfSourceStack = sourceStack.copy();
+    public ItemStack quickMoveStack(Player player, int index) {
+        ItemStack emptyStack = ItemStack.EMPTY;
+        Slot slot = this.slots.get(index);
 
-        if (pIndex < VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT) {
-            if (!moveItemStackTo(sourceStack, TE_INVENTORY_SLOT_INDEX, TE_INVENTORY_SLOT_INDEX +
-                     + TE_INVENTORY_SLOT_COUNT, false)) {
-                return ItemStack.EMPTY;
+        if (slot == null || !slot.hasItem()) {
+            return emptyStack;
+        }
+
+        ItemStack sourceStack = slot.getItem();
+        ItemStack copyStack = sourceStack.copy();
+
+        if (index >= VANILLA_SLOT_COUNT) {
+            if (!this.moveItemStackTo(sourceStack, 0, VANILLA_SLOT_COUNT, true)) {
+                return emptyStack;
             }
-        } else {
-            System.out.println("Invalid slotIndex:" + pIndex);
-            return ItemStack.EMPTY;
         }
-        if (sourceStack.getCount() == 0) {
-            sourceSlot.set(ItemStack.EMPTY);
-        } else {
-            sourceSlot.setChanged();
+
+        else {
+            if (!this.moveItemStackTo(sourceStack,
+                    TE_INVENTORY_SLOT_INDEX,
+                    TE_INVENTORY_SLOT_INDEX + 1,
+                    false)) {
+                return emptyStack;
+            }
         }
-        sourceSlot.onTake(playerIn, sourceStack);
-        return copyOfSourceStack;
+
+        if (sourceStack.isEmpty()) {
+            slot.set(ItemStack.EMPTY);
+        } else {
+            slot.setChanged();
+        }
+
+        slot.onTake(player, sourceStack);
+        return copyStack;
     }
 
     @Override
