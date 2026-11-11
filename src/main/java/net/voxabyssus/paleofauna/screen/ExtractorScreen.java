@@ -11,7 +11,7 @@ import net.voxabyssus.paleofauna.Paleofauna;
 
 public class ExtractorScreen extends AbstractContainerScreen<ExtractorMenu> {
     private static final ResourceLocation TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(Paleofauna.MOD_ID, "textures/gui/extractor_gui.png");
+            ResourceLocation.fromNamespaceAndPath(Paleofauna.MOD_ID, "textures/gui/fossil_extraction_unit.png");
 
     public ExtractorScreen(ExtractorMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, Component.empty());
