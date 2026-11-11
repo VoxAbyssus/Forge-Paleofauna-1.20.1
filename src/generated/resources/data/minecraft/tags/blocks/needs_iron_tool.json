@@ -1,0 +1,11 @@
+{
+  "values": [
+    "paleofauna:stone_fossil",
+    "paleofauna:sandstone_fossil",
+    "paleofauna:red_sandstone_fossil",
+    "paleofauna:deepslate_fossil",
+    "paleofauna:tuff_fossil",
+    "paleofauna:calcite_fossil",
+    "paleofauna:limestone_fossil"
+  ]
+}

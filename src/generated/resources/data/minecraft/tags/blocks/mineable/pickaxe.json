@@ -1,0 +1,24 @@
+{
+  "values": [
+    "paleofauna:limestone",
+    "paleofauna:cobbled_limestone",
+    "paleofauna:limestone_bricks",
+    "paleofauna:polished_limestone",
+    "paleofauna:limestone_stairs",
+    "paleofauna:limestone_slab",
+    "paleofauna:cobbled_limestone_stairs",
+    "paleofauna:cobbled_limestone_slab",
+    "paleofauna:cobbled_limestone_wall",
+    "paleofauna:limestone_bricks_stairs",
+    "paleofauna:limestone_bricks_slab",
+    "paleofauna:limestone_bricks_wall",
+    "paleofauna:polished_limestone_stairs",
+    "paleofauna:stone_fossil",
+    "paleofauna:sandstone_fossil",
+    "paleofauna:red_sandstone_fossil",
+    "paleofauna:deepslate_fossil",
+    "paleofauna:tuff_fossil",
+    "paleofauna:calcite_fossil",
+    "paleofauna:limestone_fossil"
+  ]
+}

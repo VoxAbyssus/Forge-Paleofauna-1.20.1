@@ -85,9 +85,9 @@ public class    ModItems {
     public static final RegistryObject<Item> PACHYCEPHALOSAURUS_DNA = ITEMS.register("pachycephalosaurus_dna",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PACHYCEPHALOSAURUS_MEAT = ITEMS.register("pachycephalosaurus_meat",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoods.PACHYCEPHALOSAURUS_MEAT)));
     public static final RegistryObject<Item> PACHYCEPHALOSAURUS_COOKED_MEAT = ITEMS.register("pachycephalosaurus_cooked_meat",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoods.PACHYCEPHALOSAURUS_COOKED_MEAT)));
     public static final RegistryObject<Item> PACHYCEPHALOSAURUS_SKULL = ITEMS.register("pachycephalosaurus_skull",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PACHYCEPHALOSAURUS_VERTEBRAE = ITEMS.register("pachycephalosaurus_vertebrae",
@@ -128,9 +128,9 @@ public class    ModItems {
     public static final RegistryObject<Item> DSUNGARIPTERUS_DNA = ITEMS.register("dsungaripterus_dna",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> DSUNGARIPTERUS_MEAT = ITEMS.register("dsungaripterus_meat",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoods.DSUNGARIPTERUS_MEAT)));
     public static final RegistryObject<Item> DSUNGARIPTERUS_COOKED_MEAT = ITEMS.register("dsungaripterus_cooked_meat",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoods.DSUNGARIPTERUS_COOKED_MEAT)));
     public static final RegistryObject<Item> DSUNGARIPTERUS_SKULL = ITEMS.register("dsungaripterus_skull",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> DSUNGARIPTERUS_VERTEBRAE = ITEMS.register("dsungaripterus_vertebrae",
@@ -148,9 +148,9 @@ public class    ModItems {
     public static final RegistryObject<Item> ICHTHYOSAURUS_DNA = ITEMS.register("ichthyosaurus_dna",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ICHTHYOSAURUS_MEAT = ITEMS.register("ichthyosaurus_meat",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoods.ICHTHYOSAURUS_MEAT)));
     public static final RegistryObject<Item> ICHTHYOSAURUS_COOKED_MEAT = ITEMS.register("ichthyosaurus_cooked_meat",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoods.ICHTHYOSAURUS_COOKED_MEAT)));
     public static final RegistryObject<Item> ICHTHYOSAURUS_SKULL = ITEMS.register("ichthyosaurus_skull",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ICHTHYOSAURUS_VERTEBRAE = ITEMS.register("ichthyosaurus_vertebrae",
