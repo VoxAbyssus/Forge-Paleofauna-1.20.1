@@ -1,0 +1,12 @@
+{
+  "type": "paleofauna:extractor",
+  "ingredients": [
+    {
+    "item":  "paleofauna:ichthyosaurus_skull"
+  }
+  ],
+  "output": {
+    "count": 1,
+    "item": "paleofauna:ichthyosaurus_dna"
+  }
+}

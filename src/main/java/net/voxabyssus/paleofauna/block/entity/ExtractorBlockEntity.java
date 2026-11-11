@@ -23,6 +23,7 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.voxabyssus.paleofauna.item.ModItems;
+import net.voxabyssus.paleofauna.recipe.ExtractorRecipe;
 import net.voxabyssus.paleofauna.screen.ExtractorMenu;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -30,6 +31,8 @@ import software.bernie.geckolib.animatable.GeoBlockEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.util.GeckoLibUtil;
+
+import java.util.Optional;
 
 public class ExtractorBlockEntity extends BlockEntity implements MenuProvider, GeoBlockEntity {
     private final ItemStackHandler itemHandler = new ItemStackHandler(10);
@@ -142,18 +145,65 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider, G
     }
 
     private void craftItem() {
-        ItemStack result = new ItemStack(ModItems.ICHTHYOSAURUS_DNA.get(), 1);
-        this.itemHandler.extractItem(INPUT_SLOT, 1, false);
+        Optional<ExtractorRecipe> recipe = getCurrentRecipe();
 
-        this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
-                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount()));
+        if (recipe.isEmpty()) return;
+
+        ItemStack result = recipe.get().getResultItem(null);
+
+        for (int slot = 1; slot < itemHandler.getSlots(); slot++) {
+            ItemStack outputStack = itemHandler.getStackInSlot(slot);
+
+            if (outputStack.isEmpty()) {
+                itemHandler.setStackInSlot(slot, result.copy());
+                itemHandler.extractItem(INPUT_SLOT, 1, false);
+                return;
+            }
+
+            if (ItemStack.isSameItemSameTags(outputStack, result) && outputStack.getCount() + result.getCount()
+                    <= outputStack.getMaxStackSize()) {
+                outputStack.grow(result.getCount());
+                itemHandler.extractItem(INPUT_SLOT, 1, false);
+                return;
+            }
+        }
     }
 
-    private boolean hasRecipe() {
-        boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == ModItems.ICHTHYOSAURUS_SKULL.get();
-        ItemStack result = new ItemStack(ModItems.ICHTHYOSAURUS_DNA.get());
 
-        return hasCraftingItem && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
+    private boolean hasRecipe() {
+        Optional<ExtractorRecipe> recipe = getCurrentRecipe();
+
+        if (recipe.isEmpty()) {
+            return false;
+        }
+
+        ItemStack result = recipe.get().getResultItem(null);
+
+        for (int slot = 1; slot < itemHandler.getSlots(); slot++) {
+            ItemStack outputStack = itemHandler.getStackInSlot(slot);
+
+            if (outputStack.isEmpty()) {
+                return result.getCount() <= result.getMaxStackSize();
+            }
+
+            if (ItemStack.isSameItemSameTags(outputStack, result)
+                    && outputStack.getCount() + result.getCount()
+                    <= outputStack.getMaxStackSize()) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
+    private Optional<ExtractorRecipe> getCurrentRecipe() {
+        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
+        for(int i = 0; i < itemHandler.getSlots(); i++) {
+            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
+        }
+
+        return this.level.getRecipeManager().getRecipeFor(ExtractorRecipe.Type.INSTANCE, inventory, level);
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {

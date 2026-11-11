@@ -1,0 +1,12 @@
+{
+  "type": "paleofauna:extractor",
+  "ingredients": [
+    {
+    "item":  "paleofauna:dsungaripterus_ribcage"
+  }
+  ],
+  "output": {
+    "count": 1,
+    "item": "paleofauna:dsungaripterus_dna"
+  }
+}

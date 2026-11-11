@@ -1,0 +1,12 @@
+{
+  "type": "paleofauna:extractor",
+  "ingredients": [
+    {
+    "item":  "paleofauna:pachycephalosaurus_meat"
+  }
+  ],
+  "output": {
+    "count": 1,
+    "item": "paleofauna:pachycephalosaurus_dna"
+  }
+}

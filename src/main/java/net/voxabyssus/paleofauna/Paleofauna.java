@@ -19,6 +19,7 @@ import net.voxabyssus.paleofauna.block.entity.client.ExtractorRenderer;
 import net.voxabyssus.paleofauna.entity.ModEntities;
 import net.voxabyssus.paleofauna.item.ModCreativeModTabs;
 import net.voxabyssus.paleofauna.item.ModItems;
+import net.voxabyssus.paleofauna.recipe.ModRecipes;
 import net.voxabyssus.paleofauna.screen.ExtractorScreen;
 import net.voxabyssus.paleofauna.screen.ModMenuTypes;
 import org.slf4j.Logger;
@@ -44,6 +45,8 @@ public class Paleofauna {
         ModBlockEntities.register(modEventBus);
 
         ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
