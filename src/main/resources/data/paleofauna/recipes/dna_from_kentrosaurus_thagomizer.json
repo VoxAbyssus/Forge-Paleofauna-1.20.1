@@ -1,0 +1,12 @@
+{
+  "type": "paleofauna:extractor",
+  "ingredients": [
+    {
+    "item":  "paleofauna:kentrosaurus_thagomizer"
+  }
+  ],
+  "output": {
+    "count": 1,
+    "item": "paleofauna:kentrosaurus_dna"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "paleofauna:extractor",
+  "ingredients": [
+    {
+    "item":  "paleofauna:thescelosaurus_skull"
+  }
+  ],
+  "output": {
+    "count": 1,
+    "item": "paleofauna:thescelosaurus_dna"
+  }
+}

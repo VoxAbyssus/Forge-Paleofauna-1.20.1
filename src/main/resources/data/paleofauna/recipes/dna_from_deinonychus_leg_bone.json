@@ -1,0 +1,12 @@
+{
+  "type": "paleofauna:extractor",
+  "ingredients": [
+    {
+    "item":  "paleofauna:deinonychus_leg_bone"
+  }
+  ],
+  "output": {
+    "count": 1,
+    "item": "paleofauna:deinonychus_dna"
+  }
+}

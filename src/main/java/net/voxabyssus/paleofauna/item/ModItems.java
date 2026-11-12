@@ -165,29 +165,54 @@ public class    ModItems {
     public static final RegistryObject<Item> LIMESTONE_PLANT_FOSSIL = ITEMS.register("limestone_plant_fossil",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> CAMBRIAN_TISSUE = ITEMS.register("cambrian_tissue",
+    public static final RegistryObject<Item> CAMBRIAN_ANIMAL_TISSUE = ITEMS.register("cambrian_animal_tissue",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ORDOVICIAN_TISSUE = ITEMS.register("ordovician_tissue",
+    public static final RegistryObject<Item> ORDOVICIAN_ANIMAL_TISSUE = ITEMS.register("ordovician_animal_tissue",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SILURIAN_TISSUE = ITEMS.register("silurian_tissue",
+    public static final RegistryObject<Item> SILURIAN_ANIMAL_TISSUE = ITEMS.register("silurian_animal_tissue",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> DEVONIAN_TISSUE = ITEMS.register("devonian_tissue",
+    public static final RegistryObject<Item> DEVONIAN_ANIMAL_TISSUE = ITEMS.register("devonian_animal_tissue",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CARBONIFEROUS_TISSUE = ITEMS.register("carboniferous_tissue",
+    public static final RegistryObject<Item> CARBONIFEROUS_ANIMAL_TISSUE = ITEMS.register("carboniferous_animal_tissue",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> PERMIAN_TISSUE = ITEMS.register("permian_tissue",
+    public static final RegistryObject<Item> PERMIAN_ANIMAL_TISSUE = ITEMS.register("permian_animal_tissue",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> TRIASSIC_TISSUE = ITEMS.register("triassic_tissue",
+    public static final RegistryObject<Item> TRIASSIC_ANIMAL_TISSUE = ITEMS.register("triassic_animal_tissue",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> JURASSIC_TISSUE = ITEMS.register("jurassic_tissue",
+    public static final RegistryObject<Item> JURASSIC_ANIMAL_TISSUE = ITEMS.register("jurassic_animal_tissue",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CRETACEOUS_TISSUE = ITEMS.register("cretaceous_tissue",
+    public static final RegistryObject<Item> CRETACEOUS_ANIMAL_TISSUE = ITEMS.register("cretaceous_animal_tissue",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> PALEOGENE_TISSUE = ITEMS.register("paleogene_tissue",
+    public static final RegistryObject<Item> PALEOGENE_ANIMAL_TISSUE = ITEMS.register("paleogene_animal_tissue",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> NEOGENE_TISSUE = ITEMS.register("neogene_tissue",
+    public static final RegistryObject<Item> NEOGENE_ANIMAL_TISSUE = ITEMS.register("neogene_animal_tissue",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> QUATERNARY_TISSUE = ITEMS.register("quaternary_tissue",
+    public static final RegistryObject<Item> QUATERNARY_ANIMAL_TISSUE = ITEMS.register("quaternary_animal_tissue",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> CAMBRIAN_PLANT_TISSUE = ITEMS.register("cambrian_plant_tissue",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ORDOVICIAN_PLANT_TISSUE = ITEMS.register("ordovician_plant_tissue",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SILURIAN_PLANT_TISSUE = ITEMS.register("silurian_plant_tissue",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DEVONIAN_PLANT_TISSUE = ITEMS.register("devonian_plant_tissue",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CARBONIFEROUS_PLANT_TISSUE = ITEMS.register("carboniferous_plant_tissue",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PERMIAN_PLANT_TISSUE = ITEMS.register("permian_plant_tissue",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TRIASSIC_PLANT_TISSUE = ITEMS.register("triassic_plant_tissue",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> JURASSIC_PLANT_TISSUE = ITEMS.register("jurassic_plant_tissue",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CRETACEOUS_PLANT_TISSUE = ITEMS.register("cretaceous_plant_tissue",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PALEOGENE_PLANT_TISSUE = ITEMS.register("paleogene_plant_tissue",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> NEOGENE_PLANT_TISSUE = ITEMS.register("neogene_plant_tissue",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> QUATERNARY_PLANT_TISSUE = ITEMS.register("quaternary_plant_tissue",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {

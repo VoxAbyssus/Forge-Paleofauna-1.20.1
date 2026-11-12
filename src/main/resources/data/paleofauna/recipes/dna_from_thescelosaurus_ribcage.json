@@ -1,0 +1,12 @@
+{
+  "type": "paleofauna:extractor",
+  "ingredients": [
+    {
+    "item":  "paleofauna:thescelosaurus_ribcage"
+  }
+  ],
+  "output": {
+    "count": 1,
+    "item": "paleofauna:thescelosaurus_dna"
+  }
+}

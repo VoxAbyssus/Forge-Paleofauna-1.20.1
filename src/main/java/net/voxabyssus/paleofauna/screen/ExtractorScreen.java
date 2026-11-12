@@ -39,7 +39,7 @@ public class ExtractorScreen extends AbstractContainerScreen<ExtractorMenu> {
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if (menu.isCrafting()) {
-            guiGraphics.blit(TEXTURE, x + 36, y + 31, 182, 235, menu.getScaledProgress(), 16);
+            guiGraphics.blit(TEXTURE, x + 36, y + 31, 182, 234, menu.getScaledProgress(), 16);
         }
     }
 

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "paleofauna:item/ordovician_animal_tissue"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "paleofauna:extractor",
+  "ingredients": [
+    {
+    "item":  "paleofauna:guanlong_arm_bone"
+  }
+  ],
+  "output": {
+    "count": 1,
+    "item": "paleofauna:guanlong_dna"
+  }
+}

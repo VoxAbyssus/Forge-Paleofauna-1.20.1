@@ -1,0 +1,12 @@
+{
+  "type": "paleofauna:extractor",
+  "ingredients": [
+    {
+    "item":  "paleofauna:styracosaurus_vertebrae"
+  }
+  ],
+  "output": {
+    "count": 1,
+    "item": "paleofauna:styracosaurus_dna"
+  }
+}

@@ -102,18 +102,31 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.LIMESTONE_ANIMAL_FOSSIL);
         simpleItem(ModItems.LIMESTONE_PLANT_FOSSIL);
 
-        simpleItem(ModItems.CAMBRIAN_TISSUE);
-        simpleItem(ModItems.ORDOVICIAN_TISSUE);
-        simpleItem(ModItems.SILURIAN_TISSUE);
-        simpleItem(ModItems.DEVONIAN_TISSUE);
-        simpleItem(ModItems.CARBONIFEROUS_TISSUE);
-        simpleItem(ModItems.PERMIAN_TISSUE);
-        simpleItem(ModItems.TRIASSIC_TISSUE);
-        simpleItem(ModItems.JURASSIC_TISSUE);
-        simpleItem(ModItems.CRETACEOUS_TISSUE);
-        simpleItem(ModItems.PALEOGENE_TISSUE);
-        simpleItem(ModItems.NEOGENE_TISSUE);
-        simpleItem(ModItems.QUATERNARY_TISSUE);
+        simpleItem(ModItems.CAMBRIAN_ANIMAL_TISSUE);
+        simpleItem(ModItems.ORDOVICIAN_ANIMAL_TISSUE);
+        simpleItem(ModItems.SILURIAN_ANIMAL_TISSUE);
+        simpleItem(ModItems.DEVONIAN_ANIMAL_TISSUE);
+        simpleItem(ModItems.CARBONIFEROUS_ANIMAL_TISSUE);
+        simpleItem(ModItems.PERMIAN_ANIMAL_TISSUE);
+        simpleItem(ModItems.TRIASSIC_ANIMAL_TISSUE);
+        simpleItem(ModItems.JURASSIC_ANIMAL_TISSUE);
+        simpleItem(ModItems.CRETACEOUS_ANIMAL_TISSUE);
+        simpleItem(ModItems.PALEOGENE_ANIMAL_TISSUE);
+        simpleItem(ModItems.NEOGENE_ANIMAL_TISSUE);
+        simpleItem(ModItems.QUATERNARY_ANIMAL_TISSUE);
+
+        simpleItem(ModItems.CAMBRIAN_PLANT_TISSUE);
+        simpleItem(ModItems.ORDOVICIAN_PLANT_TISSUE);
+        simpleItem(ModItems.SILURIAN_PLANT_TISSUE);
+        simpleItem(ModItems.DEVONIAN_PLANT_TISSUE);
+        simpleItem(ModItems.CARBONIFEROUS_PLANT_TISSUE);
+        simpleItem(ModItems.PERMIAN_PLANT_TISSUE);
+        simpleItem(ModItems.TRIASSIC_PLANT_TISSUE);
+        simpleItem(ModItems.JURASSIC_PLANT_TISSUE);
+        simpleItem(ModItems.CRETACEOUS_PLANT_TISSUE);
+        simpleItem(ModItems.PALEOGENE_PLANT_TISSUE);
+        simpleItem(ModItems.NEOGENE_PLANT_TISSUE);
+        simpleItem(ModItems.QUATERNARY_PLANT_TISSUE);
 
         evenSimplerBlockItem(ModBlocks.LIMESTONE_STAIRS);
         evenSimplerBlockItem(ModBlocks.LIMESTONE_SLAB);

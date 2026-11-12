@@ -31,18 +31,31 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.LIMESTONE_ANIMAL_FOSSIL.get());
                         pOutput.accept(ModItems.LIMESTONE_PLANT_FOSSIL.get());
 
-                        pOutput.accept(ModItems.CAMBRIAN_TISSUE.get());
-                        pOutput.accept(ModItems.ORDOVICIAN_TISSUE.get());
-                        pOutput.accept(ModItems.SILURIAN_TISSUE.get());
-                        pOutput.accept(ModItems.DEVONIAN_TISSUE.get());
-                        pOutput.accept(ModItems.CARBONIFEROUS_TISSUE.get());
-                        pOutput.accept(ModItems.PERMIAN_TISSUE.get());
-                        pOutput.accept(ModItems.TRIASSIC_TISSUE.get());
-                        pOutput.accept(ModItems.JURASSIC_TISSUE.get());
-                        pOutput.accept(ModItems.CRETACEOUS_TISSUE.get());
-                        pOutput.accept(ModItems.PALEOGENE_TISSUE.get());
-                        pOutput.accept(ModItems.NEOGENE_TISSUE.get());
-                        pOutput.accept(ModItems.QUATERNARY_TISSUE.get());
+                        pOutput.accept(ModItems.CAMBRIAN_ANIMAL_TISSUE.get());
+                        pOutput.accept(ModItems.ORDOVICIAN_ANIMAL_TISSUE.get());
+                        pOutput.accept(ModItems.SILURIAN_ANIMAL_TISSUE.get());
+                        pOutput.accept(ModItems.DEVONIAN_ANIMAL_TISSUE.get());
+                        pOutput.accept(ModItems.CARBONIFEROUS_ANIMAL_TISSUE.get());
+                        pOutput.accept(ModItems.PERMIAN_ANIMAL_TISSUE.get());
+                        pOutput.accept(ModItems.TRIASSIC_ANIMAL_TISSUE.get());
+                        pOutput.accept(ModItems.JURASSIC_ANIMAL_TISSUE.get());
+                        pOutput.accept(ModItems.CRETACEOUS_ANIMAL_TISSUE.get());
+                        pOutput.accept(ModItems.PALEOGENE_ANIMAL_TISSUE.get());
+                        pOutput.accept(ModItems.NEOGENE_ANIMAL_TISSUE.get());
+                        pOutput.accept(ModItems.QUATERNARY_ANIMAL_TISSUE.get());
+
+                        pOutput.accept(ModItems.CAMBRIAN_PLANT_TISSUE.get());
+                        pOutput.accept(ModItems.ORDOVICIAN_PLANT_TISSUE.get());
+                        pOutput.accept(ModItems.SILURIAN_PLANT_TISSUE.get());
+                        pOutput.accept(ModItems.DEVONIAN_PLANT_TISSUE.get());
+                        pOutput.accept(ModItems.CARBONIFEROUS_PLANT_TISSUE.get());
+                        pOutput.accept(ModItems.PERMIAN_PLANT_TISSUE.get());
+                        pOutput.accept(ModItems.TRIASSIC_PLANT_TISSUE.get());
+                        pOutput.accept(ModItems.JURASSIC_PLANT_TISSUE.get());
+                        pOutput.accept(ModItems.CRETACEOUS_PLANT_TISSUE.get());
+                        pOutput.accept(ModItems.PALEOGENE_PLANT_TISSUE.get());
+                        pOutput.accept(ModItems.NEOGENE_PLANT_TISSUE.get());
+                        pOutput.accept(ModItems.QUATERNARY_PLANT_TISSUE.get());
 
                         pOutput.accept(ModItems.DEINONYCHUS_SKULL.get());
                         pOutput.accept(ModItems.DEINONYCHUS_VERTEBRAE.get());

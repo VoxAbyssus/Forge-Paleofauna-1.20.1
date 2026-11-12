@@ -1,0 +1,12 @@
+{
+  "type": "paleofauna:extractor",
+  "ingredients": [
+    {
+    "item":  "paleofauna:herrerasaurus_vertebrae"
+  }
+  ],
+  "output": {
+    "count": 1,
+    "item": "paleofauna:herrerasaurus_dna"
+  }
+}
