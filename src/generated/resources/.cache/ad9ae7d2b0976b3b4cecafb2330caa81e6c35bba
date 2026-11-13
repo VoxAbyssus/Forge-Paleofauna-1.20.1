@@ -1,4 +1,4 @@
-// 1.20.1	2026-11-11T16:07:51.5490055	Tags for minecraft:block mod id paleofauna
-428b35ce714a32be8906e553046c854fae19903f data/minecraft/tags/blocks/mineable/pickaxe.json
-cbd83fa35bb83c182b1e9dc5a4369dc9fb8e50af data/minecraft/tags/blocks/needs_iron_tool.json
+// 1.20.1	2026-11-13T02:11:31.0251237	Tags for minecraft:block mod id paleofauna
+128b0d8219b3ad8078107f96eb8b097a543cf5dd data/minecraft/tags/blocks/mineable/pickaxe.json
+ff2cf6873e47c908380199c9ab885e790b8b195f data/minecraft/tags/blocks/needs_iron_tool.json
 27c3548588f81494693d77f55b7a8d162fdc7619 data/minecraft/tags/blocks/walls.json

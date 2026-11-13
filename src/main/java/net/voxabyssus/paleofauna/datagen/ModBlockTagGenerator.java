@@ -40,7 +40,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.DEEPSLATE_FOSSIL.get(),
                 ModBlocks.TUFF_FOSSIL.get(),
                 ModBlocks.CALCITE_FOSSIL.get(),
-                ModBlocks.LIMESTONE_FOSSIL.get()
+                ModBlocks.LIMESTONE_FOSSIL.get(),
+
+                ModBlocks.EXTRACTOR.get()
                 );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
@@ -50,7 +52,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.DEEPSLATE_FOSSIL.get(),
                 ModBlocks.TUFF_FOSSIL.get(),
                 ModBlocks.CALCITE_FOSSIL.get(),
-                ModBlocks.LIMESTONE_FOSSIL.get());
+                ModBlocks.LIMESTONE_FOSSIL.get(),
+
+                ModBlocks.EXTRACTOR.get()
+                );
 
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.COBBLED_LIMESTONE_WALL.get(),

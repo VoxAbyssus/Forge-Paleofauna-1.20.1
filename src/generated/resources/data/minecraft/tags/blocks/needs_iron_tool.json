@@ -6,6 +6,7 @@
     "paleofauna:deepslate_fossil",
     "paleofauna:tuff_fossil",
     "paleofauna:calcite_fossil",
-    "paleofauna:limestone_fossil"
+    "paleofauna:limestone_fossil",
+    "paleofauna:extractor"
   ]
 }
