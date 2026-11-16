@@ -4,25 +4,19 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.animal.Dolphin;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.Nullable;
-import software.bernie.geckolib.animatable.GeoEntity;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.util.GeckoLibUtil;
 
-public class IchthyosaurusCommunisEntity extends Animal implements GeoEntity {
+public class IchthyosaurusCommunisEntity extends Dolphin { //TODO: Switch to Water Animal for finer control later
 
     private static final EntityDataAccessor<Boolean> IS_MALE =
             SynchedEntityData.defineId(IchthyosaurusCommunisEntity.class, EntityDataSerializers.BOOLEAN);
 
-    public IchthyosaurusCommunisEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
+    public IchthyosaurusCommunisEntity(EntityType<? extends Dolphin> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
 
         if (!pLevel.isClientSide()) {
@@ -51,24 +45,10 @@ public class IchthyosaurusCommunisEntity extends Animal implements GeoEntity {
                 .add(Attributes.MOVEMENT_SPEED, 0D);
     }
 
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
-
-    }
-
-    @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {
-        return this.cache;
-
-    }
-
-    private final AnimatableInstanceCache cache =
-            GeckoLibUtil.createInstanceCache(this);
-
-    @Override
+/*    @Override
     public @Nullable AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
         return null;
-    }
+    }*/
 
     @Override
     public void addAdditionalSaveData(CompoundTag pCompound) {

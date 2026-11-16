@@ -23,7 +23,8 @@ import net.voxabyssus.paleofauna.recipe.ModRecipes;
 import net.voxabyssus.paleofauna.screen.ExtractorScreen;
 import net.voxabyssus.paleofauna.screen.ModMenuTypes;
 import org.slf4j.Logger;
-import software.bernie.geckolib.GeckoLib;
+import mod.azure.azurelib.render.item.AzItemRendererRegistry;
+import net.voxabyssus.paleofauna.item.custom.client.ExtractorItemRenderer;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Paleofauna.MOD_ID)
@@ -32,8 +33,6 @@ public class Paleofauna {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public Paleofauna(FMLJavaModLoadingContext context) {
-        GeckoLib.initialize();
-
         IEventBus modEventBus = context.getModEventBus();
 
         ModCreativeModTabs.register(modEventBus);
@@ -83,6 +82,8 @@ public class Paleofauna {
         public static void onClientSetup(FMLClientSetupEvent event) {
 
             MenuScreens.register(ModMenuTypes.EXTRACTOR_MENU.get(), ExtractorScreen::new);
+
+            AzItemRendererRegistry.register(ModBlocks.EXTRACTOR.get().asItem(), ExtractorItemRenderer::new);
         }
     }
 }

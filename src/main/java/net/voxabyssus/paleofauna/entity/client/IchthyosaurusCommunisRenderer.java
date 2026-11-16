@@ -1,38 +1,41 @@
 package net.voxabyssus.paleofauna.entity.client;
 
-import com.mojang.blaze3d.vertex.PoseStack;
+import mod.azure.azurelib.render.entity.AzEntityRenderer;
+import mod.azure.azurelib.render.entity.AzEntityRendererConfig;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.voxabyssus.paleofauna.Paleofauna;
 import net.voxabyssus.paleofauna.entity.custom.IchthyosaurusCommunisEntity;
-import software.bernie.geckolib.cache.object.BakedGeoModel;
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class IchthyosaurusCommunisRenderer extends GeoEntityRenderer<IchthyosaurusCommunisEntity> {
+public class IchthyosaurusCommunisRenderer extends AzEntityRenderer<IchthyosaurusCommunisEntity> {
 
-    public IchthyosaurusCommunisRenderer(EntityRendererProvider.Context renderManager) {
-        super(renderManager, new IchthyosaurusCommunisModel());
-        this.shadowRadius = 0.5f;
+    private static final ResourceLocation GEO =
+            ResourceLocation.fromNamespaceAndPath(Paleofauna.MOD_ID, "geo/ichthyosaurus_communis.geo.json");
+
+    public IchthyosaurusCommunisRenderer(EntityRendererProvider.Context context) {
+        super(
+                AzEntityRendererConfig.<IchthyosaurusCommunisEntity>builder(
+                                entity -> GEO,
+                                IchthyosaurusCommunisRenderer::getTexture
+                        )
+                        .setShadowRadius(0.5f)
+                        .setScale(entity -> entity.isBaby() ? 0.35f : 1.0f)
+                        .build(),
+                context
+        );
     }
 
-    @Override
-    public void scaleModelForRender(
-            float widthScale,
-            float heightScale,
-            PoseStack poseStack,
-            IchthyosaurusCommunisEntity animatable,
-            BakedGeoModel model,
-            boolean isReRender,
-            float partialTick,
-            int packedLight,
-            int packedOverlay
-    ) {
-        if (animatable.isBaby()) {
-            widthScale *= 0.35f;
-            heightScale *= 0.35f;
+    private static ResourceLocation getTexture(IchthyosaurusCommunisEntity entity) {
+        String texture;
+
+        if (entity.isBaby()) {
+            texture = "textures/entity/ichthyosaurus_communis_baby.png";
+        } else if (entity.isMale()) {
+            texture = "textures/entity/ichthyosaurus_communis_male.png";
+        } else {
+            texture = "textures/entity/ichthyosaurus_communis_female.png";
         }
 
-        super.scaleModelForRender(
-                widthScale, heightScale, poseStack, animatable,
-                model, isReRender, partialTick, packedLight, packedOverlay
-        );
+        return ResourceLocation.fromNamespaceAndPath(Paleofauna.MOD_ID, texture);
     }
 }
